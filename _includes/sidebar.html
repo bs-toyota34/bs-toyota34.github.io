@@ -1,0 +1,53 @@
+<div class="col-lg-4">
+  <!--
+  <h4>Search</h4>
+  <div class="hline"></div>
+    <p>
+      <br/>
+      <input type="text" class="form-control" placeholder="Search something">
+    </p>
+  <div class="spacing"></div>
+  -->
+  <h4>カテゴリー</h4>
+  <div class="hline"></div>
+  {% for category in site.categories %}
+    <p>
+      <a href="{{ '/category/#'  | prepend: baseurl  }}{{ category | first }}"><i class="fa fa-angle-right"></i> {{ category | first | capitalize }}</a>
+      <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
+    </p>
+  {% endfor %}
+
+  <div class="spacing"></div>
+
+  <h4>最近の記事</h4>
+  <div class="hline"></div>
+  <ul class="popular-posts">
+    {% for post in site.posts limit:site.data.theme.posts_limit %}
+      <li>
+        <a href="{{ post.url  | relative_url }}">
+          {% if post.thumb %}
+            <img src="{{ '/assets/img/blog/' | relative_url }}{{ post.date | date: "%Y-%m-%d" }}-{{ post.title }}/{{ post.thumb }}" alt="最近の記事" class="thumb" loading="lazy">
+          {% else %}
+            <img src="{{ site.icon | relative_url }}" alt="最近の記事" class="thumb" loading="lazy">
+          {% endif %}
+        </a>
+        <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+        <csmall>
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>{{ post.date | date: "%Y/%m/%d" }}</span>
+        </csmall>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="spacing"></div>
+
+  <h4>タグ</h4>
+  <div class="hline"></div>
+  <p>
+    {% for category in site.categories %}
+      {% assign genre = category | first %}
+      <a class="btn btn-theme" href="{{ 'category/#' | append: genre | relative_url }}" role="button">{{ genre | capitalize }} ({{ category | last | size }})</a>
+    {% endfor %}
+  </p>
+</div>

@@ -1,0 +1,28 @@
+<div class="container mtb">
+  <div class="row centered">
+    <h3 class="mb">ボーイスカウトについて</h3>
+    
+    {% for member in site.members %}
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="he-wrap tpl6">
+          <img src="{{ '/assets/img/members/' | relative_url }}{{ member.img }}" alt="{{ member.name }}" width="200px" height="200px" loading="lazy">
+          <div class="he-view">
+            <div class="bg a0" data-animate="fadeIn">
+              <h3 class="a1" data-animate="fadeInDown">詳しく見る:</h3>
+              {% for entry in member.social %}
+                <a href="{{ entry.url }}" target="_blank" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-{{ entry.title }}"></i></a>
+              {% endfor %}
+            </div>
+          </div><!--/he-view -->
+        </div><!--/he-wrap -->
+        
+        <h4>{{ member.name }}</h4>
+        <h5 class="ctitle">{{ member.position }}</h5>
+        <p>{{ member.text }}</p>
+        <p>{{ member.description }}</p>
+        <a class="btn btn-theme" href="{{ '/category/#' | prepend: baseurl }}{{ member.name }}" role="button">活動を見る</a>
+        <div class="hline"></div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

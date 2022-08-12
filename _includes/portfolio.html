@@ -1,0 +1,27 @@
+<div id="portfoliowrap">
+  <div class="portfolio-centered">
+    {% if include.title %}
+      <h3>{{ include.title }}<a class="btn" href="{{ '/blog/' | relative_url }}">[活動一覧]</a></h3>
+    {% endif %}
+    <div class="recentitems portfolio">
+      {% for post in site.posts limit:include.limit %}
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            {% if post.thumb %}
+              <img src="{{ '/assets/img/blog/' | relative_url }}{{ post.date | date: "%Y-%m-%d"}}-{{ post.title }}/{{ post.thumb }}" alt="最近の活動" width="200px" height="200px">
+            {% else %}
+              <img src="{{ site.icon | relative_url }}" alt="最近の活動" width="200px" height="200px">
+            {% endif %}
+            <div class="he-view">
+              <div class="bg a0" data-animate="fadeIn">
+                <h3 class="a1" data-animate="fadeInDown">{{ post.title }}</h3>
+                <a data-rel="prettyPhoto" href="{{ '/assets/img/blog/' | relative_url }}{{ post.img }}" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                <a href="{{  post.url | relative_url }}" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+              </div><!--/he-bg -->
+            </div><!--/he-view -->
+          </div><!--/he-wrap -->
+        </div><!--/end col-12 -->
+      {% endfor %}
+    </div><!--/portfolio -->
+  </div><!--/portfolio container -->
+</div><!--/Portfoliowrap -->

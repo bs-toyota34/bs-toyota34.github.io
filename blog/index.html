@@ -1,0 +1,48 @@
+---
+layout: blog
+title: 活動報告
+baselink: "/blog/"
+---
+
+<div class="container mtb">
+  <div class="row">
+
+    <!-- BLOG POSTS LIST -->
+    <div class="col-lg-8">
+      
+      <!-- Pagination links (Top) -->
+      <div class="centered">
+        <div class="pagination">
+          {% for number in (1..paginator.total_pages) %}
+            {% if number == 1 %}
+              <a class="btn btn-theme {% if number==paginator.page %}active{% endif %}" href="{{ page.baselink | prepend: baseurl }}">{{ number }}</a>
+            {% else %}
+              {% assign url = 'page' | prepend: page.baselink | append:number | append:'/' %}
+              <a class="btn btn-theme {% if number==paginator.page %}active{% endif %}" href="{{ url | prepend: baseurl }}">{{ number }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      {% include postheadline.html posts=paginator.posts limit=paginator.per_page %}
+      
+      <!-- Pagination links (Bottom) -->
+      <div class="centered">
+        <div class="pagination">
+          {% for number in (1..paginator.total_pages) %}
+            {% if number == 1 %}
+              <a class="btn btn-theme {% if number==paginator.page %}active{% endif %}" href="{{ page.baselink | prepend: baseurl }}">{{ number }}</a>
+            {% else %}
+              {% assign url = 'page' | prepend: page.baselink | append:number | append:'/' %}
+              <a class="btn btn-theme {% if number==paginator.page %}active{% endif %}" href="{{ url | prepend: baseurl }}">{{ number }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+    </div><!--/col-lg-8 -->
+
+    {% include sidebar.html %}
+
+  </div><!--/row -->
+</div><!--/container -->

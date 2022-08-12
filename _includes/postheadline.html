@@ -1,0 +1,21 @@
+{% for post in include.posts limit:include.limit %}
+  <!-- Blog Post -->
+  <a href="{{ post.url | relative_url }}">
+    {% if post.img %}
+      <img class="img-responsive" src="{{ '/assets/img/blog/' | relative_url }}{{ post.date | date: "%Y-%m-%d"}}-{{ post.title }}/{{ post.img }}" alt="最近の活動" style="max-height: 300px" loading="lazy">
+    {% endif %}
+  </a>
+  <a href="{{ post.url | relative_url }}"><h3 class="ctitle">{{ post.title }}</h3></a>
+  <p>
+    <i class="fa-solid fa-calendar-days"></i>
+    <span>{{ post.date | date: "%Y/%m/%d" }}</span>
+  </p>
+  {% if post.outline %}
+    <p>{{ post.outline }}</p>
+  {% else %}
+    {{ post.excerpt }}
+  {% endif %}
+  <a class="btn btn-theme btn-sm" href="{{ post.url | relative_url }}">続きを読む</a>
+  <div class="hline"></div>
+  <div class="spacing"></div>
+{% endfor %}

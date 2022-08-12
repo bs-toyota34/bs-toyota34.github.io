@@ -1,0 +1,43 @@
+---
+layout: contact
+title: お問い合わせ
+permalink: /contact/
+---
+
+<div class="col-lg-8">
+  <h4>お問い合わせフォーム</h4>
+  <div class="hline"></div>
+  <p>こちらのフォームから、体験、入団、質問などをお問い合わせ下さい</p>
+  <form method="post" action="https://formspree.io/f/xdobrwqv" role="form">
+    <div class="form-group">
+      <label for="InputName1">氏名</label>
+      <input type="text" class="form-control" id="exampleInputName1" name="name">
+    </div>
+    <div class="form-group">
+      <label for="InputEmail1">Eメール (回答はこちらのメールアドレスに送信するため、間違いのないようご注意ください)</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email">
+    </div>
+    <div class="form-group">
+      <label for="about">お問合せ内容</label>
+      <div class="form-check">
+        <div>
+          <input type="radio" class="form-check-input" name="about" id="choice1" value="当団について質問">
+          <label for="choice1">当団について質問</label>
+        </div>
+        <div>
+          <input type="radio" class="form-check-input" name="about" id="choice2" value="体験・入団について">
+          <label for="choice2">体験・入団について</label>
+        </div>
+        <div>
+          <input type="radio" class="form-check-input" name="about" id="choice3" value="その他">
+          <label for="choice3">その他</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message1">メッセージ</label>
+      <textarea class="form-control" id="message1" rows="6" name="message"></textarea>
+    </div>
+    <input type="submit" class="btn btn-theme"></button>
+  </form>
+</div><!-- col-lg-8 -->

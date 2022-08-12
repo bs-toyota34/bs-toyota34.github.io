@@ -1,0 +1,39 @@
+---
+layout: about
+title: 団について
+permalink: /about/
+---
+
+<div class="container mtb">
+  <!-- class row / class col-lg-6 -->
+  <h3>団について</h3>
+  <p>豊田第34団は、豊田市の美里で活動している団です</p>
+  <h3>活動場所</h3>
+  <p>活動は主に、神池公園や美里交流館、美里二区区民間などで行っています</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3560.62309248759!2d137.18372369900823!3d35.07908816709203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z576O6YeM5LqM5Yy644G144KM44GC44GE5bqD5aC0fOelnuaxoOWFrOWcknznvo7ph4zkuqTmtYHppKg!5e0!3m2!1sja!2sjp!4v1648797259455!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div><!--/container -->
+
+<div class="container mtb">
+  <h3>年間行事(2021年に行ったもの)</h3>
+  {% for color in site.data.theme.yearly_events_colors %}
+    <span class="surround {{ color.name }}">{{ color.title }}</span>
+  {% endfor %}
+  <div class="hline-d"></div>
+  
+  {% for season in site.data.contents.yearly_events %}
+    <div class="spacing"></div>
+    <h4>{{ season.title }}</h4>
+    <div class="hline"></div>
+    <div class="row">
+      {% for group in season.events %}
+        {% if group.tag != "venture" %} <div class="col-lg-3"> {% endif %}
+          {% for event in group.events %}
+            {% if event.name %}
+              <span class="surround {{ group.tag }}">{{ event.name }}</span>
+            {% endif %}
+          {% endfor %}
+          {% if group.tag != "boy" %} </div> {% endif %}
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

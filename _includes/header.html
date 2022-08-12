@@ -1,0 +1,20 @@
+<div id="headerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h1>{{ site.title }}</h1>
+      </div>
+      <div class="col-lg-8 col-lg-offset-2 himg">
+        {% if site.data.theme.banners %}
+          <div class="slider mypattern">
+            {% for banner in site.data.theme.banners %}
+              <img src="{{ banner.img | relative_url }}" alt="{{ site.title }}">
+            {% endfor %}
+          </div>
+        {% else %}
+          <img class="img-responsive" src="{{ site.banner | relative_url }}" alt="{{ site.title }}">
+        {% endif %}
+      </div><!--/col-lg-8 himg -->
+    </div><!--/row -->
+  </div> <!--/container -->
+</div><!--/headerwrap -->

@@ -1,0 +1,117 @@
+# Events Information (/about/)
+yearly_events:
+- title: 4月～6月
+  events:
+  - tag: all
+    # 団のイベント
+    events:
+      - name: 上進式,入隊式
+  - tag: beaver
+    # ビーバーのイベント
+    events:
+      - name: 芋苗植え
+      - name: 工作
+      - name: シャボン玉遊び
+  - tag: cub
+    # カブのイベント
+    events:
+      - name: 緑の募金
+      - name: 工作体験
+      - name: ボルダリング
+  - tag: boy
+    # ボーイのイベント
+    events:
+      - name: BSラリー
+      - name: サイクリング
+  - tag: venture
+    # ベンチャーのイベント
+    events:
+      - name: 無人島キャンプ
+      - name: 子ども食堂
+
+- title: 7月～9月
+  events:
+  - tag: all
+    # 団のイベント
+    events:
+      - name: 団キャンプ
+      - name: 上進式,入隊式
+  - tag: beaver
+    # ビーバーのイベント
+    events:
+      - name: 川遊び
+      - name: 芋ほり
+  - tag: cub
+    # カブのイベント
+    events:
+      - name: ハイキング
+      - name: 稲刈り体験
+  - tag: boy
+    # ボーイのイベント
+    events:
+      - name: サイクリング
+      - name: 海釣り
+      - name: カヌー体験
+  - tag: venture
+    # ベンチャーのイベント
+    events:
+      - name:
+
+- title: 10月～12月
+  events:
+  - tag: all
+    # 団のイベント
+    events:
+      - name: 美里ふれあいフェスタ
+  - tag: beaver
+    # ビーバーのイベント
+    events:
+      - name: 弓矢作り
+      - name: 草すべり
+      - name: 工作
+      - name: ハイキング
+      - name: クリスマス会
+  - tag: cub
+    # カブのイベント
+    events:
+      - name: ハイキング
+      - name: 地区カブラリー
+      - name: 魚釣り
+      - name: クリスマス会
+  - tag: boy
+    # ボーイのイベント
+    events:
+      - name: 秋季キャンプ
+      - name: ハイキング
+      - name: オリエンテーリング
+  - tag: venture
+    # ベンチャーのイベント
+    events:
+      - name: 子ども食堂
+
+- title: 1月～3月
+  events:
+  - tag: all
+    # 団のイベント
+    events:
+      - name: 発団式
+  - tag: beaver
+    # ビーバーのイベント
+    events:
+      - name: 羽子板遊び
+      - name: スケート
+      - name: 火起こし
+  - tag: cub
+    # カブのイベント
+    events:
+      - name: 初詣
+      - name: チャレンジハイク
+      - name: 工作
+  - tag: boy
+    # ボーイのイベント
+    events:
+      - name: 耐寒キャンプ
+  - tag: venture
+    # ベンチャーのイベント
+    events:
+      - name: 子ども食堂

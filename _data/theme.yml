@@ -1,0 +1,40 @@
+#トップページの初めに表示するスライドショーの画像
+banners:
+  - img: "/assets/img/banner.jpg"
+  - img: "/assets/img/banner2.jpg"
+  - img: "/assets/img/banner3.jpg"
+  - img: "/assets/img/banner4.jpg"
+
+
+#Latest Worksに表示する最近のプロジェクトの数の上限
+latest_works_num: 5
+
+#最近の活動に表示する記事の数の上限
+posts_limit: 4
+
+#アナウンスに表示する記事の数の上限
+announces_limit: 10
+
+
+# 年間行事で表示する文字の情報
+yearly_events_colors:
+  - name: all
+    title: 団
+    color: "#f5e1c1"
+    font: black
+  - name: beaver
+    title: ビーバー
+    color: "#7cc9e3"
+    font: black
+  - name: cub
+    title: カブ
+    color: "#482e7a"
+    font: white
+  - name: boy
+    title: ボーイ
+    color: "#afac55"
+    font: white
+  - name: venture
+    title: ベンチャー
+    color: "#6d6c33"
+    font: white

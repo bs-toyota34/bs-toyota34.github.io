@@ -1,0 +1,63 @@
+---
+layout: index
+title: home
+permalink: /
+---
+
+<div id="service">
+  <div class="container">
+    <div class="row centered">
+      <div class="col-md-4">
+        <a href="{{ '/blog/' | relative_url }}"><i class="fa-solid fa-hat-cowboy"></i></a>
+        <span class="sr-only">An image of a cowboy hat</span>
+        <h4>団の活動</h4>
+        <p>スカウトの活動の紹介</p>
+        <p><br/><a href="{{ '/blog/' | relative_url }}" class="btn btn-theme">詳細</a></p>
+      </div>
+      <div class="col-md-4">
+        <a href="{{ '/about/' | relative_url }}"><i class="fa-solid fa-people-group"></i></a>
+        <span class="sr-only">An image of a people</span>
+        <h4>34団について</h4>
+        <p>活動場所や年間行事についての紹介</p>
+        <p><br/><a href="{{ '/about/' | relative_url }}" class="btn btn-theme">詳細</a></p>
+      </div>
+      <div class="col-md-4">
+        <a href="{{ '/contact/' | relative_url }}"><i class="fa-solid fa-circle-question"></i></a>
+        <span class="sr-only">An image of a question mark</span>
+        <h4>体験・入団・お問い合わせ</h4>
+        <p>体験・入団・質問などのお問合せはこちら</p>
+        <p><br/><a href="{{ '/contact/' | relative_url }}" class="btn btn-theme">詳細</a></p>
+      </div>
+    </div>
+  </div><!--/container -->
+</div><!--/service -->
+
+<!--
+% include portfolio.html title="最近の活動" limit=site.data.theme.latest_works_num %
+-->
+
+<!-- Announcements -->
+{% if site.announce.size > 0 %}
+<div class="container mtb">
+  <h3>おしらせ</h3>
+  <div class="hline-d"></div>
+  <div style="margin-top:20px; margin-bottom:20px"></div>
+  <div class="wrapper" id="announce-form">
+    {% for event in site.announce limit:site.data.theme.announces_limit %}
+      <p>{{ event.url | relative_url }} {{ event.title }} {{ event.event_date | date: "%Y/%m/%d" }} {{ event.outline }}</p>
+    {% endfor %}
+    <!-- added from custom.js -->
+  </div>
+</div><!--/container mtb -->
+{% endif %}
+
+<!-- Blog -->
+<div class="container mtb">
+  <h3>最近の活動</h3>
+  <div class="hline-d"></div>
+  <div class="spacing"></div>
+  
+  {% include postheadline.html posts=site.posts limit=site.data.theme.posts_limit %}
+  
+  <a class="btn btn-theme" href="{{ '/blog/' | relative_url }}">活動一覧</a>
+</div><!--/container mtb -->

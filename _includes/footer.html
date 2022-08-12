@@ -1,0 +1,39 @@
+<div id="footerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h4>{{ site.title }}</h4>
+        <div class="hline-w"></div>
+        {% for my_page in site.navigation %}
+          <a class="btn btn-theme" href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
+        {% endfor %}
+        
+      </div><!--/col-lg-4 -->
+      <div class="col-lg-4">
+        <h4>Social Links</h4>
+        <div class="hline-w"></div>
+        <p>
+          {% for network in site.social %}
+            <a href="{{ network.url }}" class="btn-social btn-outline">
+              <i class="fa-brands fa-{{ network.title }}" aria-hidden="true"></i>
+              <span class="sr-only">{{ network.title }}</span>
+            </a>
+          {% endfor %}
+        </p>
+      </div><!--/col-lg-4 -->
+      <div class="col-lg-4">
+        <h4>Our Bunker</h4>
+        <div class="hline-w"></div>
+        <p>
+          {% for line in site.address.first.lines %}
+            {{ line }}<br>
+          {% endfor %}
+        </p>
+      </div><!--/col-lg-4 -->
+    </div><!--/row -->
+    <p class="centered">
+      ※このホームページ上のスカウト運動に関する事項は、ボーイスカウト日本連盟ホームページ掲載<a href="https://www.scout.or.jp/member/site/open/">「ボーイスカウト関係のホームページ開設」</a>に沿って、
+      <br>ボーイスカウト愛知連盟豊田第34団 団委員長&lt;{{ site.email }}&gt;の責任のもとに掲載しています。
+    </p>
+  </div><!--/container -->
+</div><!--/footerwrap -->

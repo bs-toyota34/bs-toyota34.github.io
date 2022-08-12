@@ -1,0 +1,111 @@
+# Site settings
+title: ボーイスカウト豊田第34団
+description: "ボーイスカウト豊田第34団のホームページです。34団は主に豊田市の美里で活動している団です。"
+analytics: #Google analytics code in the format XX-nnnnnnnn-n
+#baseurl: "/blog/" #release
+baseurl: "/"
+url: "http://bs-toyota34.github.io"
+icon: "/assets/img/icon.jpg" #path of the site icon, e.g. "assets/img/icon.jpg"
+banner: "/assets/img/banner.jpg" #path of the site banner, e.g. "assets/img/banner.jpg"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
+
+colors:  #in hex code if not noted else
+  primary: "#00b3fe" #"#F70031"
+  primary_rgb: "0,179,254" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.
+  secondary: "#384452" #"#33004D"
+  link: "#428bca"
+  link_hover: "#01b2fe"
+  footer_heading: "#ffffff"
+  footer_content: "#bfc9d3"
+
+# Font settings
+fonts:
+  - "'Hiragino maru Gothic ProN W4'"
+  - "'Hiragino Kaku Gothic Pro'"
+  - "'Hiragino Sans'"
+  - "'arial'"
+  - "'Meiryo'"
+  - "'MS PGothic'"
+  - sans-serif
+
+collections:
+  announce:
+    output: true
+    permalink: /announce/:title/
+
+# navigation
+navigation:
+  - title: ホーム
+    url: /
+  - title: 活動報告
+    url: /blog/
+  - title: 団について
+    url:  /about/
+  - title: お問い合わせ
+    url: /contact/
+
+# Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
+social:
+  - title: github
+    url: "https://github.com/bs-toyota34/bs-toyota34.github.io"
+  #- title: twitter
+  #  url:
+
+# Members information. Shown on About page.
+members:
+  - name: ビーバースカウト
+    position: Beaver Scout
+    text: 小学1年生から小学2年生
+    description: 「みんなとともに仲良く遊ぶ」「自然に親しむ」「楽しみや喜びを分かちあう」などをねらいとし、さまざまなことにチャレンジします。
+    img: boyscout0.jpg
+    social:
+      - title: link
+        url: "https://www.scout.or.jp/bvs/"
+  - name: カブスカウト
+    position: Cub Scout
+    text: 小学3年生から小学5年生
+    description: 「自分のことは自分でする」「みんなでルールを作って仲良く遊ぶ」「自然や社会とふれあうこと」といった目標を通じ、自立心や創造力を身につけます。
+    img: boyscout1.jpg
+    social:
+      - title: link
+        url: "https://www.scout.or.jp/cs/"
+  - name: ボーイスカウト
+    position: Boy Scout
+    text: 小学6年生から中学3年生
+    description: キャンプやハイキングなどで「リーダーシップ」「協調性」「社会性」などを育み、奉仕活動を積極的に行うことで「役に立つことの大切さ」を学びます。
+    img: boyscout2.jpg
+    social:
+      - title: link
+        url: "https://www.scout.or.jp/bs/"
+  - name: ベンチャースカウト
+    position: Venturer Scout
+    text: 中学3年生から高校3年生
+    description: 「高度な野外活動」への挑戦のほか、関心をもったさまざまな課題や問題について個人やチームで考えて行動していきます。
+    img: boyscout3.jpg
+    social:
+      - title: link
+        url: "https://www.scout.or.jp/vs/"
+
+
+# Postal address (add as many lines as necessary). Shown in footer and on Contact page.
+address:
+  - lines:
+    - 豊田第34団
+    - 愛知県豊田市,
+    - 美里を中心に活動
+email: toyota34boyscout@gmail.com
+
+
+### write about pagenates
+paginate: 3
+paginate_path: "/blog/page:num/"
+
+sitemap:
+  file: "/sitemap.xml"
+
+exclude:
+  - converter

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% include wrap.html %}
+
+<div class="container mtb">
+  <div class="row">
+    <!-- SINGLE ANNOUNCE -->
+    <div class="col-lg-8">
+      <a href="{{ page.url | relative_url }}"><h3 class="ctitle">{{ page.title }}</h3></a>
+      <div>
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>{{ page.event_date | date: "%Y/%m/%d" }} 開催</span>
+      </div>
+      
+      {{ content }}
+
+      <div class="spacing"></div>
+      <csmall>Posted on {{ page.date | date: "%Y/%m/%d" }}</csmall>
+      <!-- <h6>SHARE:</h6>
+      <p class="share">
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-tumblr"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>		 		
+      </p> -->
+    </div><!--/col-lg-8 -->
+    
+    {% include sidebar.html %}
+
+  </div><!--/row -->
+</div><!--/container -->
