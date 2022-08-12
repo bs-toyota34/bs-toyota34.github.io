@@ -1,10 +1,8 @@
 # Site settings
 title: ボーイスカウト豊田第34団
 description: "ボーイスカウト豊田第34団のホームページです。34団は主に豊田市の美里で活動している団です。"
-analytics: #Google analytics code in the format XX-nnnnnnnn-n
-#baseurl: "/blog/" #release
 baseurl: "/"
-url: "http://bs-toyota34.github.io"
+url: "https://bs-toyota34.github.io"
 icon: "/assets/img/icon.jpg" #path of the site icon, e.g. "assets/img/icon.jpg"
 banner: "/assets/img/banner.jpg" #path of the site banner, e.g. "assets/img/banner.jpg"
 
