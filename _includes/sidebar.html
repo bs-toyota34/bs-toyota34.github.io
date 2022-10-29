@@ -22,7 +22,7 @@
   <h4>最近の記事</h4>
   <div class="hline"></div>
   <ul class="popular-posts">
-    {% for post in site.posts limit:site.data.theme.posts_limit %}
+    {% for post in site.posts limit:site.data.theme.posts_limit_sidebar %}
       <li>
         <a href="{{ post.url  | relative_url }}">
           {% if post.thumb %}

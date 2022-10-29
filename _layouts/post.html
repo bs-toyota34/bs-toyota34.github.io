@@ -7,7 +7,7 @@ layout: default
 <div class="container mtb">
   <div class="row">
     <!-- SINGLE POST -->
-    <div class="col-lg-8">
+    <div class="col-lg-8 article">
       <!-- Blog Post  -->
       {% if page.img %}
         <p><img class="img-responsive" src="{{ '/assets/img/blog/' | relative_url }}{{ page.date | date: "%Y-%m-%d"}}-{{ page.title }}/{{ page.img }}"></p>
@@ -37,8 +37,8 @@ layout: default
 </div><!--/container -->
 
 <style>
-p {
-  margin-bottom: 4px;
-  margin-top: 2px;
-}
+  .article p {
+    margin-bottom: 4px;
+    margin-top: 2px;
+  }
 </style>
