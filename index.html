@@ -1,5 +1,6 @@
 ---
 layout: index
+title: home
 permalink: /
 ---
 
@@ -42,7 +43,8 @@ permalink: /
   <div class="hline-d"></div>
   <div style="margin-top:20px; margin-bottom:20px"></div>
   <div class="wrapper" id="announce-form">
-    {% for event in site.announce limit:site.data.theme.announces_limit %}
+    {% assign events = site.announce | sort: "event_date" | reverse %}
+    {% for event in events limit:site.data.theme.announces_limit %}
       <p>{{ event.url | relative_url }} {{ event.title }} {{ event.event_date | date: "%Y/%m/%d" }} {{ event.outline }}</p>
     {% endfor %}
     <!-- added from custom.js -->
