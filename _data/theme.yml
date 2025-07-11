@@ -1,9 +1,9 @@
 #トップページの初めに表示するスライドショーの画像
 banners:
-  - img: "/assets/img/banner.jpg"
-  - img: "/assets/img/banner2.jpg"
-  - img: "/assets/img/banner3.jpg"
-  - img: "/assets/img/banner4.jpg"
+  - img: "/assets/img/blog/2025-01-26-発団50周年記念式典/image009.jpg"
+  - img: "/assets/img/blog/2025-05-25-スカウトめしに参加/image003.jpg"
+  - img: "/assets/img/blog/2024-08-10-団キャンプ/image013.jpg"
+  - img: "/assets/img/blog/2025-05-03-隼挑戦移動野営/image012.jpg"
 
 
 #Latest Worksに表示する最近のプロジェクトの数の上限
