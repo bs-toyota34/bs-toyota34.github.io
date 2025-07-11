@@ -27,7 +27,7 @@ permalink: /category/
               <a href="{{ post.url  | relative_url }}"><img src="{{ site.icon | relative_url }}" alt="Popular Post" style="max-height: 70px;" ></a>
             {% endif %}
             <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-            <em>Posted on {{ post.date | date: "%Y/%m/%d" }}</em>
+            <em style="font-size: 14px;">Posted on {{ post.date | date: "%Y/%m/%d" }}</em>
           </li>
         {% endfor %}
       </ul>

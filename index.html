@@ -4,6 +4,22 @@ title: home
 permalink: /
 ---
 
+<!-- Announcements -->
+{% if site.announce.size > 0 %}
+<div class="container mtb">
+  <h3>おしらせ</h3>
+  <div class="hline-d"></div>
+  <div style="margin-top:20px; margin-bottom:20px"></div>
+  <div class="wrapper" id="announce-form">
+    {% assign events = site.announce | sort: "event_date" | reverse %}
+    {% for event in events limit:site.data.theme.announces_limit %}
+      <p>{{ event.url | relative_url }} {{ event.title }} {{ event.event_date | date: "%Y/%m/%d" }} {{ event.outline }}</p>
+    {% endfor %}
+    <!-- added from custom.js -->
+  </div>
+</div><!--/container mtb -->
+{% endif %}
+
 <div id="service">
   <div class="container">
     <div class="row centered">
@@ -31,26 +47,6 @@ permalink: /
     </div>
   </div><!--/container -->
 </div><!--/service -->
-
-<!--
-% include portfolio.html title="最近の活動" limit=site.data.theme.latest_works_num %
--->
-
-<!-- Announcements -->
-{% if site.announce.size > 0 %}
-<div class="container mtb">
-  <h3>おしらせ</h3>
-  <div class="hline-d"></div>
-  <div style="margin-top:20px; margin-bottom:20px"></div>
-  <div class="wrapper" id="announce-form">
-    {% assign events = site.announce | sort: "event_date" | reverse %}
-    {% for event in events limit:site.data.theme.announces_limit %}
-      <p>{{ event.url | relative_url }} {{ event.title }} {{ event.event_date | date: "%Y/%m/%d" }} {{ event.outline }}</p>
-    {% endfor %}
-    <!-- added from custom.js -->
-  </div>
-</div><!--/container mtb -->
-{% endif %}
 
 <!-- Blog -->
 <div class="container mtb">
